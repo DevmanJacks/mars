@@ -1,8 +1,11 @@
 // Phobos language compiler
 
 type Token enum {
+    EndOfFile
+    Character
     Identifier
-
+    String
+    
     LeftBrace
     RightBrace
     LeftBracket
