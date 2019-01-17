@@ -48,3 +48,7 @@ var tokens = []String {
     [Return] = "return"
     [Struct] = "struct"
 }
+
+func Token.ToString() -> String {
+	return tokens[self]
+} 
