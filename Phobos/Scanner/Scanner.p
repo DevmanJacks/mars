@@ -1,10 +1,11 @@
 // Phobos language compiler
 
+import Phobos.Source
 import Phobos.Token
 
 type Scanner struct {
     // Immutable state
-    src:    []UInt8
+    src:    *Source
     length: UInt
 
     // Scanning state
@@ -12,7 +13,7 @@ type Scanner struct {
     nextOffset: Int
 }
 
-func Scanner() -> *Scanner {
+func Scanner(file: *File) -> *Scanner {
 
 }
 
