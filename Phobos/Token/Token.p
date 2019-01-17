@@ -51,10 +51,4 @@ var tokens = []String {
 
 func Token.ToString() -> String {
 	return tokens[self]
-} 
-    [Token.Enum] = "enum"
-    [Token.Func] = "func"
-    [Token.Import] = "import"
-    [Token.Return] = "return"
-    [Token.Struct] = "struct"
 }
