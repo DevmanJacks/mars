@@ -9,16 +9,16 @@ type Source struct {
     base:   UInt
     length: Uint
 
-    lines []UInt
+    lines: []UInt
 }
 
-// Column returns the column within the line in the Source containing the Pos
+// Column returns the column in the line in the Source containing the Pos
 func Source.Column(pos: Pos) -> UInt {
     line := self.Line(pos)
     return pos - lines[line - 1] + 1
 }
 
-// Line will return the line in the Source containing the Pos
+// Line returns the line in the Source containing the Pos
 func Source.Line(pos: Pos) -> UInt {
     Assert(pos >= base && pos - base < length)
    

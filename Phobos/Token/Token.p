@@ -27,26 +27,26 @@ type Token enum {
 }
 
 var tokens = []String {
-    [Token.Identifier] = "Identifier"
+    [Token.Identifier] = "Identifier",
     
-    [Token.LeftBrace] = "{"
-    [Token.RightBrace] = "}"
-    [Token.LeftBracket] = "["
-    [Token.RightBracket] = "]"
-    [Token.LeftParen] = "("
-    [Token.RightParen] = ")"
-    [Token.Colon] = ":"
-    [Token.Comma] = ","
-    [Token.Dot] = "."
-    [Token.Returns] = "->"
+    [Token.LeftBrace] = "{",
+    [Token.RightBrace] = "}",
+    [Token.LeftBracket] = "[",
+    [Token.RightBracket] = "]",
+    [Token.LeftParen] = "(",
+    [Token.RightParen] = ")",
+    [Token.Colon] = ":",
+    [Token.Comma] = ",",
+    [Token.Dot] = ".",
+    [Token.Returns] = "->",
 
-    [Token.Asterisk] = "*"
+    [Token.Asterisk] = "*",
 
-    [Enum] = "enum"
-    [Func] = "func"
-    [Import] = "import"
-    [Return] = "return"
-    [Struct] = "struct"
+    [Token.Enum] = "enum",
+    [Token.Func] = "func",
+    [Token.Import] = "import",
+    [Token.Return] = "return",
+    [Token.Struct] = "struct"
 }
 
 func Token.ToString() -> String {
