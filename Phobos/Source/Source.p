@@ -26,6 +26,8 @@ func Source.Line(pos: Pos) -> UInt {
         if pos < offset {
             return line - 1
         }
+    }
+    
     return lines.length - 1
 }
 

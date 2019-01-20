@@ -2,7 +2,7 @@
 
 import Token
 
-type Parser {
+type Parser struct {
     scanner: *Scanner
 
     // Current token
