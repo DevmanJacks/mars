@@ -1,4 +1,10 @@
-// ...
+////////////////////////////////////////////////////////////
+//
+// Phobos Compiler - tool for building mars operating system
+//
+// Copyright (c) Mark Jackson		20 January 2019
+//
+////////////////////////////////////////////////////////////
 
 import System.IO
 
@@ -27,7 +33,7 @@ func Source.Line(pos: Pos) -> UInt {
             return line - 1
         }
     }
-    
+
     return lines.length - 1
 }
 

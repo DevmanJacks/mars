@@ -1,4 +1,10 @@
-// ...
+////////////////////////////////////////////////////////////
+//
+// Phobos Compiler - tool for building mars operating system
+//
+// Copyright (c) Mark Jackson		20 January 2019
+//
+////////////////////////////////////////////////////////////
 
 // Pos is a compact representation of a position in a file or a memory block
 type Pos UInt
