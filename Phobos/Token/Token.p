@@ -49,6 +49,7 @@ var tokens = []String {
     [Token.Asterisk] = "*",
 
     [Token.Enum] = "enum",
+    
     [Token.Func] = "func",
     [Token.Import] = "import",
     [Token.Return] = "return",
@@ -57,4 +58,24 @@ var tokens = []String {
 
 func Token.ToString() -> String {
 	return tokens[self]
+}
+
+// Binary search on tokens to see if the string is a keyword
+func CheckKeyword(s: String) -> Token {
+    start := Token.Enum
+    end := Token.Struct
+    
+    while end > start {
+        index := (end - start) / 2 + start
+        
+        if s == tokens[index] {
+            return index
+        } else if s < tokens[index] {
+            end = index - 1
+        } else {
+            start = index + 1
+        }
+    }
+    
+    return Token.Identifier
 }
