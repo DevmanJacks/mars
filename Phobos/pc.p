@@ -9,5 +9,8 @@
 import Phobos.Parser
 
 func main() {
-    p := Parser("test.p")
+    file := AddFile("test.p")
+    scanner := Scanner(file)
+    parser := Parser(scanner)
+    
 }
