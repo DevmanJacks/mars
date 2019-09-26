@@ -6,7 +6,8 @@
 //
 ////////////////////////////////////////////////////////////
 
-import Token
+import Phobos.Scanner
+import Phobos.Token
 
 type Parser struct {
     scanner: *Scanner
@@ -17,12 +18,13 @@ type Parser struct {
     token:  Token
 
     // Are composite literals allowed in the current parsing context
-    // Not allowed in function signatures and control statements
+    // They are not allowed in function signatures and control statement expressions
     compositeAllowed: Bool
 }
 
-func Parser() -> *Parser {
+func Parser(scanner: *Scanner) -> *Parser {
     p := new Parser
+    p.scanner = scanner
     p.compositeAllowed = true
     p.Next()
     return p

@@ -9,22 +9,22 @@
 // Pos is a compact representation of a position in a file or a memory block
 type Pos UInt
 
-// 
+// An undefined position
 const undefinedPos: Pos = 0
 
-// Find the file that contains this Pos
-func Pos.File() -> *File {
-    var file: *File
+// Find the Source that contains this Pos
+func Pos.Source() -> *Source {
+    var source: *Source
     
-    for _, f in files {
-        if pos >= f.base {
-            file = f
+    for _, s in sources {
+        if pos >= s.base {
+            source = s
         } else {
             break
         }
     }
     
-    return file
+    return source
 }
 
 func Pos.ToString() -> String {
